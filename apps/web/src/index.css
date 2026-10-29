@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+@import '@cho-gia-su/ui/theme.css';
+@source '../../../packages/ui/src';
+@source '../../../packages/pwa/src';
+
+body {
+  @apply bg-page text-content text-text;
+}
+
+/* Màu của Chợ gia sư theo bản thiết kế Eric duyệt ngày 2026-10-28 (YCTD-360): cùng tông xanh gốc của cổng vận hành, cổng quản trị
+   (#1f4e8c, #12304f) nhưng nền kem ấm cho phụ huynh. Ghi đè biến màu của bộ chủ đề ngay trong ứng dụng, không sửa packages/ui; chữ phụ
+   #5d6875 trên nền #fbf8f3 đạt tương phản 4,5:1 */
+:root {
+  --color-brand: #1f4e8c;
+  --color-brand-strong: #12304f;
+  --color-link: #1f4e8c;
+  --color-page: #fbf8f3;
+  --color-selected: #e8eef7;
+  --color-border: #e7e1d8;
+  --color-border-strong: #d6cfc4;
+  --color-text: #17202a;
+  --color-text-secondary: #4f5966;
+  --color-text-muted: #5d6875;
+  --color-warning: #7a4600;
+  --color-danger: #a32a20;
+  --color-success: #1d6b43;
+}
+
+/* Vùng chạm tối thiểu 44 × 44 px, chữ trong ô nhập từ 16 px để iOS không tự phóng to (cùng quy tắc DT-26 phần 26d của ứng dụng phụ
+   huynh) */
+input:not([type='checkbox'], [type='radio'], [type='range'], [type='hidden'], [type='color']),
+select,
+textarea {
+  font-size: max(16px, 1em);
+  min-height: 44px;
+}
+button,
+[role='button'],
+input[type='button'],
+input[type='submit'] {
+  min-height: 44px;
+  min-width: 44px;
+}

@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+@import '@cho-gia-su/ui/theme.css';
+@source '../../../packages/ui/src';
+
+body {
+  @apply bg-page text-content text-text;
+}
+
+/* Các trang quản trị chép từ cổng vận hành của School Management viết bằng thẻ HTML thuần (section, form, label, table); kiểu chung dưới
+   đây cho các thẻ đó trong vùng nội dung. Ô nhập 16 px, vùng chạm 44 px */
+.quan-tri section {
+  @apply mb-6 flex flex-col gap-4 rounded-2xl border border-border bg-card p-5;
+}
+.quan-tri h2 {
+  @apply text-page-title font-semibold;
+}
+.quan-tri h3 {
+  @apply text-section-title font-semibold;
+}
+.quan-tri form,
+.quan-tri fieldset {
+  @apply flex flex-col gap-3;
+}
+.quan-tri fieldset {
+  @apply rounded-xl border border-border p-4;
+}
+.quan-tri label {
+  @apply flex flex-col gap-1 text-label font-medium;
+}
+.quan-tri label:has(> input[type='checkbox']) {
+  @apply flex-row items-center gap-2;
+}
+.quan-tri input:not([type='checkbox']),
+.quan-tri select,
+.quan-tri textarea {
+  @apply min-h-11 rounded-lg border border-border-strong bg-card px-3 py-2 text-base;
+}
+.quan-tri button {
+  @apply min-h-11 self-start rounded-lg border border-border-strong bg-card px-4 py-2 text-label font-medium hover:bg-selected;
+}
+.quan-tri button[type='submit'] {
+  @apply border-brand bg-brand text-white hover:bg-brand-strong;
+}
+.quan-tri table {
+  @apply w-full border-collapse text-label;
+}
+.quan-tri th,
+.quan-tri td {
+  @apply border-b border-border px-2 py-2 text-left align-top;
+}
+.quan-tri [role='alert'] {
+  @apply rounded-lg border border-danger/30 bg-danger/5 px-4 py-3 text-danger;
+}
+.quan-tri [role='status'] {
+  @apply rounded-lg border border-success/30 bg-success/5 px-4 py-3 text-success;
+}
+.quan-tri code {
+  @apply rounded bg-selected px-1 break-all;
+}

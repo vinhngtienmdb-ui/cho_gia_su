@@ -1,0 +1,17 @@
+{
+  "name": "@cho-gia-su/tests",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@cho-gia-su/api": "workspace:*",
+    "@cho-gia-su/config": "workspace:*",
+    "@cho-gia-su/database": "workspace:*",
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^24.0.0"
+  }
+}

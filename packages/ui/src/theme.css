@@ -1,0 +1,34 @@
+/* Mã màu, cỡ chữ theo 15_HE_THONG_THIET_KE.md mục 2 và 3; tông xanh dương theo mẫu Eric gửi ngày 2026-10-13 (YCTD-99) */
+/* DT-26 phần 26e (YCTD-235): màu nút chính, thanh đầu trang, liên kết, báo lỗi, cảnh báo, thông tin, thành công, chữ phụ đậm hơn để chữ đạt
+   tương phản 4,5:1 (WCAG AA), kể cả chữ trên nền nhạt cùng tông của nhãn trạng thái; tên trường vàng thuần trên thanh đầu trang
+   xanh; ứng dụng giáo viên, phụ huynh đã ghi đè màu ở phần 26d */
+@theme {
+  --color-brand: #0670c0;
+  --color-brand-strong: #055a9a;
+  --color-link: #0369a1;
+  --color-positive: #10b981;
+  --color-page: #f5f7fa;
+  --color-card: #ffffff;
+  --color-selected: #e6f2fc;
+  /* Thanh đầu trang: nền xanh, chữ trắng, tên trường vàng */
+  --color-header: #0670c0;
+  --color-header-strong: #055a9a;
+  --color-header-accent: #ffff00;
+  /* Nền biểu tượng phân hệ trên menu sổ xuống */
+  --color-workspace: #84b818;
+  --color-text: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-border-strong: #cbd5e1;
+  --color-success: #166534;
+  --color-warning: #92400e;
+  --color-danger: #b91c1c;
+  --color-info: #1d4ed8;
+  --color-neutral: #475569;
+
+  --text-page-title: 24px;
+  --text-section-title: 18px;
+  --text-content: 15px;
+  --text-label: 14px;
+}

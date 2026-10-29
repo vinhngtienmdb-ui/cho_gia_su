@@ -1,0 +1,32 @@
+{
+  "name": "@cho-gia-su/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node --env-file-if-exists=../../.env dist/main.js",
+    "tao-quan-tri": "node --env-file-if-exists=../../.env dist/tao-quan-tri.js",
+    "test": "node --env-file-if-exists=../../.env --test --test-concurrency=3 \"dist/**/*.test.js\""
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1156.0",
+    "@cho-gia-su/database": "workspace:*",
+    "@nestjs/common": "^11.2.7",
+    "@nestjs/core": "^11.2.7",
+    "@nestjs/platform-express": "^11.2.7",
+    "@node-rs/argon2": "^2.2.2",
+    "jose": "^6.2.12",
+    "kysely": "^0.29.6",
+    "livekit-server-sdk": "2.19.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@cho-gia-su/config": "workspace:*",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^24.0.0"
+  }
+}

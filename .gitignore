@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+coverage/
+test-results/
+playwright-report/
+.claude/settings.local.json
+
+# Tệp tạm của AI: script thử, log, ảnh chụp, kết quả trung gian
+tam_thoi/
+
+# Trạng thái của lần chạy kiểm thử giao diện (chuỗi kết nối, khóa ngẫu nhiên)
+tests/.e2e-state.json

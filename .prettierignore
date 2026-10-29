@@ -1,0 +1,6 @@
+tai_lieu/
+pnpm-lock.yaml
+dist/
+test-results/
+playwright-report/
+tam_thoi/

@@ -1,0 +1,95 @@
+# Tích hợp liên tục: kiểm tra định dạng, lint, dựng, kiểm kiểu, chạy database migration, kiểm thử máy chủ, kiểm thử đầu cuối
+name: Kiem thu
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  kiem-thu:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_PASSWORD: ci_quan_tri
+        ports:
+          - 5442:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-retries 10
+    env:
+      PGHOST: 127.0.0.1
+      PGPORT: 5442
+      PGPASSWORD: ci_quan_tri
+      POSTGRES_USER: postgres
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm format:check
+      - run: pnpm lint
+      - run: pnpm build
+      - run: pnpm typecheck
+      # Cơ sở dữ liệu cho bước chạy database migration; kiểm thử tự tạo cơ sở dữ liệu riêng của lần chạy
+      - run: |
+          echo "POSTGRES_PASSWORD=ci_quan_tri" > .env
+          pnpm cai-dat-tren-may
+      - run: pnpm test
+
+  kiem-thu-giao-dien:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_PASSWORD: ci_quan_tri
+        ports:
+          - 5442:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-retries 10
+    env:
+      PGHOST: 127.0.0.1
+      PGPORT: 5442
+      PGPASSWORD: ci_quan_tri
+      POSTGRES_USER: postgres
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: pnpm --filter @cho-gia-su/tests exec playwright install --with-deps chromium
+      - run: pnpm test:e2e
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ket-qua-kiem-thu-giao-dien
+          path: tests/test-results
+          retention-days: 7
+
+  quet-phu-thuoc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm audit --prod --audit-level high

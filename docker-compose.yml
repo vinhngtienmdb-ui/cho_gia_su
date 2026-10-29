@@ -1,0 +1,25 @@
+# Môi trường phát triển trên máy: PostgreSQL và kho tệp tương thích S3 riêng của Chợ gia sư. Cổng khác School Management (5432, 8333)
+# để chạy song song trên cùng máy
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - '5442:5432'
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres']
+      interval: 5s
+      retries: 10
+  seaweedfs:
+    image: chrislusf/seaweedfs:3.80
+    command: server -s3 -dir=/data
+    ports:
+      - '8343:8333'
+    volumes:
+      - seaweedfs-data:/data
+volumes:
+  postgres-data:
+  seaweedfs-data:

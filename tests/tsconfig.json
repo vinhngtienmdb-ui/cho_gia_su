@@ -1,0 +1,8 @@
+{
+  "extends": "../packages/config/tsconfig.node.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "allowJs": true
+  },
+  "include": ["playwright.config.ts", "e2e", "e2e-environment.mjs"]
+}

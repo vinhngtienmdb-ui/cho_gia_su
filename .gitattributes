@@ -1,0 +1,4 @@
+* text=auto eol=lf
+# Tệp lệnh Windows giữ CRLF (gradlew.bat của dự án Android, DT-26 phần 26f)
+*.bat text eol=crlf
+*.cmd text eol=crlf
