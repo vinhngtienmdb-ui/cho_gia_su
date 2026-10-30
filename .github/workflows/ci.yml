@@ -65,6 +65,12 @@ jobs:
       PGPORT: 5442
       PGPASSWORD: ci_quan_tri
       POSTGRES_USER: postgres
+      # Kho tệp tương thích S3 của lần chạy: thiếu thì máy chủ không nhận tệp giấy tờ (spec 196 nộp phiếu lý lịch tư pháp). Tên kho do
+      # playwright.config.ts đặt (S3_BUCKET); khóa truy cập là giá trị giả, kho không bật xác thực
+      S3_ENDPOINT: http://127.0.0.1:8343
+      S3_REGION: us-east-1
+      S3_ACCESS_KEY_ID: kiem_thu
+      S3_SECRET_ACCESS_KEY: kiem_thu
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -73,6 +79,10 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      # Khối services không truyền được lệnh khởi động nên chạy bằng docker run, cùng ảnh và cổng với docker-compose.yml
+      - run: |
+          docker run -d -p 8343:8333 chrislusf/seaweedfs:3.80 server -s3 -dir=/data
+          timeout 60 sh -c 'until curl -s -o /dev/null http://127.0.0.1:8343; do sleep 1; done'
       - run: pnpm build
       - run: pnpm --filter @cho-gia-su/tests exec playwright install --with-deps chromium
       - run: pnpm test:e2e
@@ -88,8 +98,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
+      # Không bật cache: pnpm vì việc này không cài gói, thư mục kho pnpm không có nên bước lưu cache báo lỗi
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-          cache: pnpm
       - run: pnpm audit --prod --audit-level high
