@@ -1,6 +1,6 @@
 # Mục lục tài liệu Chợ gia sư
 
-Bộ tài liệu theo quy trình Vibecoding_Flow. Dự án bắt đầu ngày 2026-10-30 bằng cách tách phần Chợ gia sư khỏi School Management (yêu cầu thay đổi YCTD-384 của School Management, quyết định của Eric ngày 2026-10-30). Tài liệu lập từ hiện trạng mã lúc tách; điểm chưa xác định ghi "Chưa xác định" để Eric xác nhận.
+Bộ tài liệu theo quy trình Vibecoding_Flow. Dự án bắt đầu ngày 2026-10-30 bằng cách tách phần Chợ gia sư khỏi School Management (yêu cầu thay đổi YCTD-393 của School Management, quyết định của Eric ngày 2026-10-30). Tài liệu lập từ hiện trạng mã lúc tách; điểm chưa xác định ghi "Chưa xác định" để Eric xác nhận.
 
 | Tài liệu | Nội dung | Trạng thái |
 |---|---|---|

@@ -12,7 +12,7 @@ import {
 } from './admin-api.js';
 import { MarketPage } from './MarketPage.js';
 
-// Ứng dụng quản trị Chợ gia sư (YCTD-384, quyết định của Eric ngày 2026-10-30): đăng nhập bằng tên đăng nhập, mật khẩu và mã TOTP (hoặc
+// Ứng dụng quản trị Chợ gia sư (YCTD-393, quyết định của Eric ngày 2026-10-30): đăng nhập bằng tên đăng nhập, mật khẩu và mã TOTP (hoặc
 // mã khôi phục); sau đăng nhập có trang Chợ gia sư (cấu hình, văn bản, duyệt hồ sơ, thanh toán, kiểm duyệt, an toàn theo vai) và trang
 // Tài khoản quản trị (vai quản trị)
 function LoginPage({ onSignedIn }: { onSignedIn: (session: AdminSession) => void }) {

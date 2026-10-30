@@ -1,7 +1,7 @@
 import type { ColumnType, Generated } from 'kysely';
 
 // Kiểu dữ liệu các bảng của cơ sở dữ liệu Chợ gia sư, khớp với tệp thay đổi cấu trúc ở migrations/. Nguồn gốc: cơ sở dữ liệu
-// `marketplace` của School Management (DT-27 phần 27f, YCTD-256), tách thành sản phẩm riêng ngày 2026-10-30 (YCTD-384)
+// `marketplace` của School Management (DT-27 phần 27f, YCTD-256), tách thành sản phẩm riêng ngày 2026-10-30 (YCTD-393)
 export type CreatedTimestamp = ColumnType<Date, Date | undefined, never>;
 export type UpdatedTimestamp = ColumnType<Date, Date | undefined, Date>;
 

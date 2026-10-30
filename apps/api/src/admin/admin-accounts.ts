@@ -24,7 +24,7 @@ import { ADMIN_ROLES, operatorRolesFor } from '../common/shared.js';
 import { MarketContext } from '../market/market-context.js';
 import { hashSessionToken, newSessionToken } from '../market/market-tokens.js';
 
-// Tài khoản quản trị riêng của Chợ gia sư (YCTD-384, quyết định của Eric ngày 2026-10-30): thay nhân viên vận hành của nền tảng School
+// Tài khoản quản trị riêng của Chợ gia sư (YCTD-393, quyết định của Eric ngày 2026-10-30): thay nhân viên vận hành của nền tảng School
 // Management. Đăng nhập bằng tên đăng nhập, mật khẩu và mã TOTP (hoặc một mã khôi phục dùng một lần); sai 5 lần khóa 15 phút; phiên 12
 // giờ, lưu băm SHA-256 của mã phiên. Vai quan_tri tạo, khóa, mở tài khoản quản trị khác; khóa TOTP và mã khôi phục chỉ hiện một lần lúc tạo
 export const ADMIN_SESSION_LIFETIME_MS = 12 * 3600 * 1000;

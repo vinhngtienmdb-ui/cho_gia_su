@@ -5,7 +5,7 @@ import { ChildReadMode, ParentAccount } from './ParentAccount.js';
 import { CARD_CLASS, Initials } from './styles.js';
 
 // Khu phụ huynh của chợ gia sư (DT-27 phần 27f): hồ sơ con tối thiểu (tên hiển thị, năm sinh, cấp, lớp), đồng ý của cha mẹ theo phiên bản
-// cho từng con, rút đồng ý (bản tách khỏi School Management, YCTD-384, bỏ liên kết với trường). Theo bản thiết kế duyệt ngày 2026-10-28
+// cho từng con, rút đồng ý (bản tách khỏi School Management, YCTD-393, bỏ liên kết với trường). Theo bản thiết kế duyệt ngày 2026-10-28
 // (YCTD-360): mỗi con một thẻ, sửa được hồ sơ con (máy chủ đã có PUT), xóa phải xác nhận, có khối thông tin tài khoản
 const LEVELS = [
   { value: 'TH', label: 'Tiểu học', grades: [1, 2, 3, 4, 5] },

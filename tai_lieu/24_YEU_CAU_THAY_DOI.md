@@ -2,7 +2,7 @@
 
 ### THAY_DOI_01: Khởi tạo sản phẩm bằng cách tách khỏi School Management – 2026-10-30
 
-- Lý do: quyết định của Eric ngày 2026-10-30 (YCTD-384 của School Management).
+- Lý do: quyết định của Eric ngày 2026-10-30 (YCTD-393 của School Management).
 - Nội dung thay đổi: xem tài liệu 04 mục 2 và nhật ký 02 ngày 2026-10-30.
 - Thành phần bị ảnh hưởng: toàn bộ kho.
 - Dữ liệu bị ảnh hưởng: không có dữ liệu chuyển sang; bảng `market_school_links` không còn; cấu hình chợ chuyển sang `market_settings`.

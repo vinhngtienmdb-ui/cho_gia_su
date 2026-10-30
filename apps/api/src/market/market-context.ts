@@ -12,7 +12,7 @@ import { API_CONFIGURATION, type ApiConfiguration } from '../common/configuratio
 import { ApplicationError, Clock, readBearerToken, unauthenticatedError } from '../common/server.js';
 import { hashSessionToken } from './market-tokens.js';
 
-// Ngữ cảnh của chợ ở máy chủ API (nguồn: DT-27 phần 27f, YCTD-256 của School Management; tách thành sản phẩm riêng ở YCTD-384):
+// Ngữ cảnh của chợ ở máy chủ API (nguồn: DT-27 phần 27f, YCTD-256 của School Management; tách thành sản phẩm riêng ở YCTD-393):
 // - điểm cuối nằm ở `/api/v1/market/*`; máy chủ chỉ phục vụ chợ nên không còn kiểm tên miền, không còn công tắc bật chợ;
 // - phiên của người dùng chợ là chuỗi ngẫu nhiên (bảng market_sessions); phiên quản trị là chuỗi ngẫu nhiên riêng (bảng
 //   market_admin_sessions), cấp sau khi đăng nhập bằng mật khẩu và mã TOTP (admin-auth.ts)

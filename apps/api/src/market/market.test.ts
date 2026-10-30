@@ -6,7 +6,7 @@ import { sendWithHost, startMarketApi, type MarketTestApi, type Reply } from '..
 import { MarketMessenger } from './market-messenger.js';
 
 // Nền chợ gia sư (DT-27 phần 27f, YCTD-256), kịch bản CT-27f-2, CT-27f-4, CT-27f-5: cấu hình ở trang quản trị với thu tiền thật bị chặn,
-// tài khoản phụ huynh và hồ sơ con có đồng ý theo phiên bản, tài khoản gia sư. Bản tách (YCTD-384) bỏ phần cách ly với trường và liên
+// tài khoản phụ huynh và hồ sơ con có đồng ý theo phiên bản, tài khoản gia sư. Bản tách (YCTD-393) bỏ phần cách ly với trường và liên
 // kết với trường. Dữ liệu giả, không gọi dịch vụ thật
 describe('chợ gia sư: nền (27f)', () => {
   let environment: MarketTestApi;

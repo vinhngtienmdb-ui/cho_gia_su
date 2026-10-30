@@ -31,7 +31,7 @@ export interface ApplicationOptions {
 }
 
 // Mô-đun gốc của máy chủ API Chợ gia sư. Danh sách bộ điều khiển và dịch vụ lấy từ các tệp đăng ký phần dt-27f đến dt-27j, yctd-364 của
-// School Management khi tách (YCTD-384), bỏ liên kết với trường, thêm tài khoản quản trị riêng và điểm nhận sự kiện video
+// School Management khi tách (YCTD-393), bỏ liên kết với trường, thêm tài khoản quản trị riêng và điểm nhận sự kiện video
 @Module({})
 export class ApplicationModule {
   static register(configuration: ApiConfiguration, clock: Clock, options: ApplicationOptions = {}): DynamicModule {

@@ -1,6 +1,6 @@
 import type { Response } from 'express';
 
-// Tệp tải lên và trả tệp đã lưu (lấy hai hàm cần dùng từ activities/content-files.ts của School Management khi tách chợ, YCTD-384)
+// Tệp tải lên và trả tệp đã lưu (lấy hai hàm cần dùng từ activities/content-files.ts của School Management khi tách chợ, YCTD-393)
 export interface UploadedPart {
   originalname: string;
   size: number;

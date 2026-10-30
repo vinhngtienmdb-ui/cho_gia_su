@@ -17,7 +17,7 @@ import { SystemClock, totpCode } from './common/server.js';
 import { createApplication } from './create-application.js';
 
 // Dựng máy chủ API của chợ cho kiểm thử: cơ sở dữ liệu riêng của lần chạy, kho tệp trong bộ nhớ, video giả lập, việc định kỳ tắt (kiểm
-// thử tự gọi). Thay startMultiTenantApi của School Management khi tách chợ (YCTD-384): không còn trường, dịch vụ định danh, nền tảng
+// thử tự gọi). Thay startMultiTenantApi của School Management khi tách chợ (YCTD-393): không còn trường, dịch vụ định danh, nền tảng
 export interface Reply {
   status: number;
   body: Record<string, unknown>;

@@ -7,7 +7,7 @@ PostgreSQL, một cơ sở dữ liệu `cho_gia_su` do vai trò riêng `cho_gia_
 | Tệp | Nội dung |
 |---|---|
 | 0001 đến 0051 | Chép từ cơ sở dữ liệu `marketplace` của School Management (DT-27 phần 27f đến 27j, YCTD-364, 365); tệp 0004 bỏ bảng `market_school_links` khi tách |
-| 0060 | `market_settings`, `market_admins`, `market_admin_recovery_codes`, `market_admin_sessions` (YCTD-384) |
+| 0060 | `market_settings`, `market_admins`, `market_admin_recovery_codes`, `market_admin_sessions` (YCTD-393) |
 
 Thêm tệp mới: đặt `migrations/<4 chữ số>_<tên>.ts` và thêm một dòng ở `migrations/index.ts`; kiểm thử `settings.test.ts` báo lỗi khi thiếu.
 

@@ -4,7 +4,7 @@ import { readdirSync } from 'node:fs';
 import { migrations } from '../migrations/index.js';
 import { MarketSettingsError, parseMarketSettings, REAL_PAYMENTS_BLOCKED_MESSAGE } from './settings.js';
 
-// Cấu hình chợ (DT-27 phần 27f, YCTD-256, CT-27f-1): thu tiền thật không bật được ở bản này. Bản tách (YCTD-384) bỏ công tắc bật chợ và
+// Cấu hình chợ (DT-27 phần 27f, YCTD-256, CT-27f-1): thu tiền thật không bật được ở bản này. Bản tách (YCTD-393) bỏ công tắc bật chợ và
 // tên miền khỏi cấu hình
 
 describe('parseMarketSettings (CT-27f-1)', () => {

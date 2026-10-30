@@ -3,7 +3,7 @@ import type { Migration } from 'kysely/migration';
 
 // Hồ sơ con do phụ huynh tạo ở chợ gia sư (DT-27 phần 27f, YCTD-256; tài liệu 47 mục 19.3 "trẻ em trước"): dữ liệu tối thiểu là tên
 // hiển thị, năm sinh, cấp học, lớp; không thu số định danh, ngày sinh đầy đủ, ảnh của trẻ. Trẻ không có tài khoản (GD-135). Bản tách
-// khỏi School Management (YCTD-384) bỏ bảng liên kết với trường `market_school_links`: chợ không liên hệ với hệ thống trường
+// khỏi School Management (YCTD-393) bỏ bảng liên kết với trường `market_school_links`: chợ không liên hệ với hệ thống trường
 export const migration: Migration = {
   async up(database) {
     await database.schema

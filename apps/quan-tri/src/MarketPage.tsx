@@ -7,7 +7,7 @@ import { MarketReviewModeration } from './MarketReviewModeration.js';
 import { AdminApiError } from './admin-api.js';
 
 // Trang "Chợ gia sư" của ứng dụng quản trị (nguồn: trang cùng tên của cổng vận hành School Management, DT-27 phần 27f, YCTD-256; tách ở
-// YCTD-384, bỏ công tắc bật chợ và tên miền): hạn giữ bản ghi (GD-132), hạn khiếu nại (GD-133), tỷ lệ hoa hồng mặc định (E-01, để trống
+// YCTD-393, bỏ công tắc bật chợ và tên miền): hạn giữ bản ghi (GD-132), hạn khiếu nại (GD-133), tỷ lệ hoa hồng mặc định (E-01, để trống
 // khi chưa chốt), mốc phòng học video (GD-164), hạn dùng gói buổi (GD-165), đăng phiên bản mới của văn bản pháp lý, số tài khoản. Máy chủ
 // thay ô không gửi bằng giá trị mặc định nên biểu mẫu luôn gửi đủ các ô. Thu tiền thật luôn tắt (chặn ở máy chủ đến khi xong E-01 đến
 // E-07). Gọi máy chủ API ở /api/v1/market/admin

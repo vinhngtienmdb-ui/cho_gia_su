@@ -1,4 +1,4 @@
-// Phần dùng chung của ứng dụng Chợ gia sư (gói market-client của School Management, gộp vào ứng dụng khi tách, YCTD-384): gọi máy chủ
+// Phần dùng chung của ứng dụng Chợ gia sư (gói market-client của School Management, gộp vào ứng dụng khi tách, YCTD-393): gọi máy chủ
 // API của chợ, phiên của chợ, biểu mẫu đăng ký, xác nhận mã, đăng nhập
 export { LoginForm, RegisterForm, VerifyForm } from './AccountForms.js';
 export { ChangePasswordForm, DisplayNameForm, ForgotPasswordForm } from './AccountSecurity.js';

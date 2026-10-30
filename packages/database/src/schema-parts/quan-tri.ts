@@ -1,7 +1,7 @@
 import type { ColumnType, Generated } from 'kysely';
 import type { CreatedTimestamp, UpdatedTimestamp } from '../schema.js';
 
-// Cấu hình chợ và tài khoản quản trị riêng (YCTD-384; migrations 0060). Ở School Management cấu hình chợ nằm ở `platform_settings` khóa
+// Cấu hình chợ và tài khoản quản trị riêng (YCTD-393; migrations 0060). Ở School Management cấu hình chợ nằm ở `platform_settings` khóa
 // `market` và người quản trị là nhân viên vận hành của nền tảng; bản tách giữ cả hai trong cơ sở dữ liệu của chợ. Quyết định của Eric
 // ngày 2026-10-30: tài khoản quản trị riêng, mật khẩu và TOTP bắt buộc, ứng dụng quản trị riêng
 export type MarketAdminRole = 'quan_tri' | 'ho_tro' | 'ke_toan';

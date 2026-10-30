@@ -1,7 +1,7 @@
 import { readProviderDefinitions, type ExternalProviderDefinition } from './external-identity/index.js';
 
 // Cấu hình máy chủ API của Chợ gia sư, đọc từ biến môi trường. Lấy các mục của chợ trong cấu hình máy chủ API School Management khi tách
-// (YCTD-384); bỏ mọi mục của trường, nền tảng nhiều trường, liên kết với trường
+// (YCTD-393); bỏ mọi mục của trường, nền tảng nhiều trường, liên kết với trường
 export const API_CONFIGURATION = Symbol('API_CONFIGURATION');
 
 export type VideoProviderCode = 'livekit' | 'livekit-cloud' | 'mock';

@@ -16,7 +16,7 @@ import { DOCUMENT_KIND_LABELS } from './market-accounts.js';
 import { MarketContext } from './market-context.js';
 import { operatorRolesFor } from '../common/shared.js';
 
-// Cấu hình chợ ở ứng dụng quản trị (DT-27 phần 27f, YCTD-256; tách sản phẩm ở YCTD-384): hạn giữ bản ghi, hạn khiếu nại, tỷ lệ hoa
+// Cấu hình chợ ở ứng dụng quản trị (DT-27 phần 27f, YCTD-256; tách sản phẩm ở YCTD-393): hạn giữ bản ghi, hạn khiếu nại, tỷ lệ hoa
 // hồng mặc định (dữ liệu cho 27h), đăng phiên bản mới của văn bản pháp lý, số liệu tổng. Cần mã phiên quản trị. Thu tiền thật không bật
 // được (packages/database/src/settings.ts)
 function view(settings: MarketSettings) {

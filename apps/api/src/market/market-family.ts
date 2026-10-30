@@ -14,7 +14,7 @@ import { MarketContext, marketNotFound } from './market-context.js';
 //   bị khóa dùng (27h không đặt buổi được) đến khi đồng ý lại, xóa hồ sơ thì xóa luôn đồng ý;
 // - Tiểu học chỉ lớp 1 đến 5, Trung học cơ sở 6 đến 9, Trung học phổ thông 10 đến 12 (chặn dạy thêm `curriculum` cho Tiểu học ở 27h
 //   dựa vào cấp này);
-// - bản tách khỏi School Management (YCTD-384) bỏ liên kết hồ sơ con với trường: chợ không liên hệ với hệ thống trường
+// - bản tách khỏi School Management (YCTD-393) bỏ liên kết hồ sơ con với trường: chợ không liên hệ với hệ thống trường
 const LEVEL_GRADES: Record<MarketSchoolLevel, [number, number]> = { TH: [1, 5], THCS: [6, 9], THPT: [10, 12] };
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 

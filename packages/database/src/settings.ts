@@ -1,7 +1,7 @@
 import type { Kysely } from 'kysely';
 import type { MarketplaceDatabase } from './schema.js';
 
-// Cấu hình chợ, lưu ở bảng `market_settings` khóa `market` (YCTD-384; ở School Management là `platform_settings` khóa `market`, DT-27
+// Cấu hình chợ, lưu ở bảng `market_settings` khóa `market` (YCTD-393; ở School Management là `platform_settings` khóa `market`, DT-27
 // phần 27f, YCTD-256). Bản tách bỏ công tắc bật chợ và tên miền: máy chủ API của sản phẩm chỉ phục vụ chợ. Giữ nguyên:
 // - hạn giữ bản ghi (GD-132), hạn khiếu nại trước khi giải ngân (GD-133), tỷ lệ hoa hồng mặc định (E-01, để trống đến khi chốt);
 // - **thu tiền thật luôn tắt**: lưu `real_payments_enabled = true` bị từ chối cho đến khi xong E-01 đến E-07 (luật sư, tổ chức có giấy

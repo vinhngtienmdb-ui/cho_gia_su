@@ -1,7 +1,7 @@
 import { sql } from 'kysely';
 import type { Migration } from 'kysely/migration';
 
-// Cấu hình chợ và tài khoản quản trị riêng (YCTD-384): thay khóa `market` của `platform_settings` và nhân viên vận hành của nền tảng
+// Cấu hình chợ và tài khoản quản trị riêng (YCTD-393): thay khóa `market` của `platform_settings` và nhân viên vận hành của nền tảng
 // School Management. Tài khoản quản trị đăng nhập bằng mật khẩu và mã TOTP; phiên lưu băm SHA-256 của mã phiên như phiên của chợ
 export const migration: Migration = {
   async up(database) {

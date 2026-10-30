@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState, type FormEvent } from 'react';
 import { ADMIN_ROLE_LABELS, AdminApiError, adminRequest, type AdminRole } from './admin-api.js';
 
-// Tài khoản quản trị (YCTD-384): vai quản trị tạo tài khoản mới (khóa TOTP và mã khôi phục hiện một lần, giao cho người dùng tài khoản),
+// Tài khoản quản trị (YCTD-393): vai quản trị tạo tài khoản mới (khóa TOTP và mã khôi phục hiện một lần, giao cho người dùng tài khoản),
 // khóa, mở tài khoản. Không tự khóa tài khoản của mình (máy chủ chặn)
 interface AdminRow {
   id: string;

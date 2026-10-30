@@ -6,7 +6,7 @@ import { VIDEO_PROVIDER, VideoWebhookError, type VideoRoomProvider } from './com
 import { MarketRoomsService } from './market/market-rooms.js';
 
 // Nhận sự kiện gọi lại của máy chủ video (vào, ra, ghi xong, phòng kết thúc) có chữ ký. Ở School Management điểm này thuộc mô-đun video
-// của trường và chuyển sự kiện phòng `market-` sang chợ; bản tách chỉ có phòng học của chợ (YCTD-384)
+// của trường và chuyển sự kiện phòng `market-` sang chợ; bản tách chỉ có phòng học của chợ (YCTD-393)
 @Controller('video/webhook')
 @PublicEndpoint()
 export class VideoWebhookController {

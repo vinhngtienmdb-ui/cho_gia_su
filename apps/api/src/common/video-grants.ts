@@ -1,5 +1,5 @@
 // Vai trò trong phòng video và quyền tương ứng (sao chép từ gói shared của School Management, DT-27 phần 27a, YCTD-251, khi tách chợ,
-// YCTD-384)
+// YCTD-393)
 export type VideoRoomRole = 'host' | 'student' | 'guardian' | 'observer';
 export type VideoTrackSource = 'camera' | 'microphone' | 'screen_share' | 'screen_share_audio';
 
